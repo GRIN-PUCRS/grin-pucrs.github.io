@@ -1,0 +1,19 @@
+.header {
+  /* background-image: url(/img/team.jpg); */
+  background-repeat: no-repeat;
+  background-color: lightslategrey;
+	background-blend-mode: multiply;
+	background-size: cover;
+	background-attachment: fixed;
+	padding-top: 4rem;
+	padding-bottom: 5rem;
+	color: white;
+}
+
+a#nav-a:hover {
+	color: rgb(0, 213, 201);
+}
+
+html{
+	scroll-behavior: smooth;
+}

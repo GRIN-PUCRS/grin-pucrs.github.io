@@ -1,0 +1,128 @@
+.title-projects {
+  text-align: center;
+}
+
+#description {
+  text-align: center;
+}
+
+.description-display {
+  padding: 1rem 2rem 7rem 2rem;
+}
+
+@media (min-width: 959px) {
+  .description-display {
+    padding: 1rem 2rem 4rem 2rem;
+  }
+}
+
+/*.description-display {
+  padding: 1rem 2rem 4rem 2rem;;
+}*/
+
+@media (min-width: 1279px) {
+  .description-display {
+    padding: 2rem 3rem 4rem 3rem;
+  }
+}
+
+@media (max-width: 975px) {
+  #description-picture {
+    height: 20rem;
+  }
+}
+
+@media (min-width: 976px) {
+  #description-picture {
+    height: 35rem;
+  }
+}
+
+@media (min-width: 1114px) {
+  #description-picture {
+    height: 30rem;
+  }
+}
+
+@media (min-width: 1391px) {
+  #description-picture {
+    height: 25rem;
+  }
+}
+
+#description-picture {
+  width: inherit;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+/*.borda {
+  width: 10%;
+  height: 2.0rem;
+  border-bottom-style: solid;
+  border-color: rgb(0, 213, 201);
+  position: absolute;
+  top: 85%;
+  z-index: 2;
+}
+
+.borda-comp {
+  width: 50%;
+  height: 2.0rem;
+  position: absolute;
+  top: 85%;
+  right: 25%;
+  left: 25%;
+  z-index: 2;
+}*/
+
+.lead-link {
+  position: absolute;
+  top: 85%;
+  right: 25%;
+  left: 25%;
+}
+
+@media (min-width: 592px) {
+  .lead-link {
+    top: 82%;
+  }
+}
+
+@media (min-width: 975px) {
+  .lead-link {
+    top: 85%;
+  }
+}
+
+@media (min-width: 1444px) {
+  .lead-link {
+    top: 80%;
+  }
+}
+
+@media (min-width: 1670px) {
+  .lead-link {
+    top: 75%;
+  }
+}
+
+.btn {
+  width: 60%;
+}
+
+.publicacoes {
+  padding: 5px 12px;
+  margin-right: 10px;
+  color: rgb(0, 213, 201);
+  border-style: solid;
+}
+
+#description a {
+  color: inherit;
+}
+
+#description a:hover {
+  text-decoration: none;
+  color: rgb(0, 213, 201);
+}

@@ -1,0 +1,81 @@
+---
+layout: default
+---
+
+<header>
+  <div class="jumbotron jumbotron-fluid mb-0 header" id="projetos">
+    <div class="container">
+      <div class="row align-items-center" style="justify-content: center">
+        <div class="ml-5">
+          <h1 class="display-4">Título</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="projects" id="projects">
+  <div class="container p-0 mt-3" style="background-color: white;">
+    {{ content }}
+  </div>
+</section>
+
+<footer class="post-footer">
+  <figure class="img-grin">
+    <img src="/img/GRIN.png">
+  </figure>
+  <div class="container">
+    <div class="row">
+      <div class="autores">
+        <p style="color: #b7b9c2; font-family: 'Montserrat';">Escrito por:</p>
+        <h5 style="font-family: 'Montserrat'; font-size: 1rem;">Autor</h5>
+        <!-- {% for autor in page.autores %}
+        <h5 style="font-family: 'Montserrat'; font-size: 1rem;">{{ autor.nome }}</h5>
+        {% endfor %} -->
+      </div>
+  </div>
+  </div>
+</footer>
+
+{% for post in site.posts %}
+  <div class="container mt-4 mb-4">
+    <div class="card-deck mb-5">
+      <div class="card">
+        <a href="{{ post.url }}">
+          <img class="card-img-top" src="/img/team.jpg" alt="Imagem de capa do card">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">Título do card</h5>
+          <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior, para demonstração.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">01/10/2021</small>
+        </div>
+      </div>
+      <div class="card">
+        <a href="{{ post.url }}">
+          <img class="card-img-top" src="/img/projects.jpg" alt="Imagem de capa do card">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">Título do card</h5>
+          <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">25/09/2021</small>
+        </div>
+      </div>
+      <div class="card">
+        <a href="{{ post.url }}">
+          <img class="card-img-top" src="/assets/img/header-carousel/lad.jpg" alt="Imagem de capa do card">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">Título do card</h5>
+          <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro, para mostrar a altura igual, em ação.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">18/09/2021</small>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}

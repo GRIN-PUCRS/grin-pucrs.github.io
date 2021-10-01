@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<header>
+  <div class="jumbotron jumbotron-fluid mb-0 header" id="projetos">
+    <div class="container">
+      <div class="row align-items-center" style="justify-content: center">
+        <div class="ml-5">
+          <h1 class="display-4">Publicações</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row lista">
+    <div class="col-lg-12 m-5">
+      <ul>
+        {% for paper in site.papers %}
+          <li><span class="fa-li"><i class="fas fa-chevron-right"></i></span>{{ paper.title }}</li>
+          <p>{{ paper.reference }}</p>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

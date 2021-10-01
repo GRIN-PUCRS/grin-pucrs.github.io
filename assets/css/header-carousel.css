@@ -1,0 +1,12 @@
+.carousel-item img {
+  height: 20rem;
+  object-fit: cover;
+}
+
+.carousel-col-img {
+  padding-right: 0px;
+}
+
+#carousel-col-dir {
+  background-color: gainsboro;
+}

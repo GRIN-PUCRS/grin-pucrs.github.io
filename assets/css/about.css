@@ -1,0 +1,26 @@
+.lista ul {
+  list-style: none
+}
+
+.lista li {
+  font-size: 1.25em;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.fa-li {
+  left: 0.5em;
+  color: rgb(0, 213, 201);
+}
+
+#carouselExampleIndicators {
+  margin-bottom: 2rem;
+  margin-top: -3rem;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  right: 0;
+  left: 0;
+}

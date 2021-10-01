@@ -1,0 +1,29 @@
+<section class="bg-light page-section" id="team">
+  <!-- <div class="container">
+    <div class="col-lg-12 text-center">
+      <h2 class="display-4 p-5">Equipe</h2>
+    </div>
+  </div> -->
+  <div class="container p-5">
+    <div class="col-lg-12">
+      <div class="team-member">
+        <img class="mx-auto rounded-circle" src="/img/members/tiagoferreto.jpg">
+        <h4>Prof. Dr. Tiago Ferreto</h4>
+        <p class="text-muted">Coordenador do Grupo</p>
+      </div>
+    </div>
+    <div class="row">
+      {% for member in site.members%}
+        {% if member.role != 'Coordenador do Grupo' %}
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="{{ member.picture }}">
+              <h4>{{ member.name }}</h4>
+              <p class="text-muted">{{ member.role }}</p>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+--- 
+layout: default
+--- 
+
+<header>
+  <div class="jumbotron jumbotron-fluid mb-0 header" id="inicio">
+    <div class="container">
+          <h1 class="display-4" style="font-size: 2rem">Grupo de Pesquisa em Redes, Infraestrutura e Computação em Nuvem</h1>
+          <p class="lead">Escola Politécnica - PUCRS</p>
+    </div> 
+  </div>
+</header>
+
+{% include news.html %}
+
+<section class="about bg-light p-4">
+  <div class="container" style="text-align: center;">
+    <h2 class="display-4">Sobre o grupo</h2>
+  </div>
+  <div class="container">
+    {{ content }}
+  </div>
+</section>
+
+{% include partners.html %}
