@@ -1,0 +1,63 @@
+---
+layout: default
+---
+<header>
+  <div class="jumbotron jumbotron-fluid mb-0 header" id="projetos">
+    <div class="container">
+      <div class="row align-items-center" style="justify-content: center">
+        <h1 class="display-4">Notícias</h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container mt-4 mb-4">
+  <div class="row">
+    {% for post in paginator.posts %}
+    <div class="card-deck mb-5 col-lg-4">
+        <div class="card">
+          <a href="{{ post.url }}">
+            <img class="card-img-top" src="{{ post.picture }}" alt="Imagem de capa do card">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text">{{ post.description }}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{ post.data }}</small>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="paginação mb-4">
+  
+  {% if paginator.total_pages > 1 %}
+    <div class="pagination" style="justify-content: center;">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}">&laquo;</a>
+      {% else %}
+        <span>&laquo;</span>
+      {% endif %}
+
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <span class="webjeda">{{ page }}</span>
+        {% elsif page == 1 %}
+          <a href="/news">{{ page }}</a>
+        {% else %}
+          <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}">&raquo;</a>
+      {% else %}
+        <span>&raquo;</span>
+      {% endif %}
+    </div>
+  {% endif %}
+
+</div> 

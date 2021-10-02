@@ -1,8 +1,77 @@
 <div class="container">
 
-{% for post in site.posts %}
-
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      {% for post in site.posts limit:3 %}
+        {% assign cont = forloop.index %}
+          {% if cont == 1 %}
+            <li data-target="#carouselExampleIndicators" data-slide-to="{{ forloop.index }}" class="active"></li>
+            {% else %}
+            <li data-target="#carouselExampleIndicators" data-slide-to="{{ forloop.index }}" class=""></li>
+          {% endif %}
+      {% endfor %}
+    </ol>
+    <div class="carousel-inner">
+      {% for post in site.posts limit:3 %}
+        {% assign cont = forloop.index %}
+          {% if cont == 1 %}
+            <div class="carousel-item active">
+              <a href="{{ post.url }}">
+                <img class="d-block w-100" src="{{ post.picture }}" alt="{{ post.title }}">
+              </a>
+              <div class="carousel-caption d-md-block">
+                <h5>{{ post.title }}</h5>
+                <p>{{ post.description }}</p>
+              </div>
+            </div>
+            {% else %}
+            <div class="carousel-item">
+              <a href="{{ post.url }}">
+                <img class="d-block w-100" src="{{ post.picture }}" alt="{{ post.title }}">
+              </a>
+              <div class="carousel-caption d-md-block">
+                <h5>{{ post.title }}</h5>
+                <p>{{ post.description }}</p>
+              </div>
+            </div>
+          {% endif %}
+      {% endfor %}
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Próximo</span>
+    </a>
+    
+  </div>
+</div>
+
+<div class="container mt-4 mb-4">
+  <div class="row">
+    {% for post in site.posts limit: 3 %} <!-- offset: continue -->
+    <div class="card-deck mb-5 col-lg-4">
+        <div class="card">
+          <a href="{{ post.url }}">
+            <img class="card-img-top" src="{{ post.picture }}" alt="Imagem de capa do card">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text">{{ post.description }}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">{{ post.data }}</small>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+  <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -45,48 +114,5 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Próximo</span>
     </a>
-  </div>
-
-
-
-  <div class="card-deck mb-5">
-    <div class="card">
-      <a href="{{ post.url }}">
-        <img class="card-img-top" src="/img/team.jpg" alt="Imagem de capa do card">
-      </a>
-      <div class="card-body">
-        <h5 class="card-title">Título do card</h5>
-        <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior, para demonstração.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">01/10/2021</small>
-      </div>
-    </div>
-    <div class="card">
-      <a href="{{ post.url }}">
-        <img class="card-img-top" src="/img/projects.jpg" alt="Imagem de capa do card">
-      </a>
-      <div class="card-body">
-        <h5 class="card-title">Título do card</h5>
-        <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">25/09/2021</small>
-      </div>
-    </div>
-    <div class="card">
-      <a href="{{ post.url }}">
-        <img class="card-img-top" src="/assets/img/header-carousel/lad.jpg" alt="Imagem de capa do card">
-      </a>
-      <div class="card-body">
-        <h5 class="card-title">Título do card</h5>
-        <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro, para mostrar a altura igual, em ação.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">18/09/2021</small>
-      </div>
-    </div>
-  </div>
-{% endfor %}
-
-</div>
+    
+  </div> -->
