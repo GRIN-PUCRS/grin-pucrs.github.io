@@ -3,6 +3,16 @@ layout: publications
 title: Publicações
 ---
 
+## 2021
+
+## 2020
+
+## 2019
+
+## 2018
+
+## 2017
+
 ## 2016
 
 - FERRETO, T.; CORDELLA, F.; GUBIANI, V.; SILVA, M. **ICE – Uma ferramenta para emulação de InterClouds baseadas em OpenStack.** In XIV Workshop de Computação em Clouds e Aplicações. Salvador. 2016.
