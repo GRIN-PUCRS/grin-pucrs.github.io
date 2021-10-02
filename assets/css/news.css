@@ -8,6 +8,11 @@
   margin-left: 0;
 }
 
+.card-deck .card {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .card:hover {
   opacity: 0.6;
 }
