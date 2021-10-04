@@ -1,10 +1,5 @@
 .header {
-  /* background-image: url(/img/team.jpg); */
-  background-repeat: no-repeat;
   background-color: lightslategrey;
-	background-blend-mode: multiply;
-	background-size: cover;
-	background-attachment: fixed;
 	padding-top: 4rem;
 	padding-bottom: 5rem;
 	color: white;

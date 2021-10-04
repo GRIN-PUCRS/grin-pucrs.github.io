@@ -1,0 +1,33 @@
+#publications h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+#publications h2:before, h2:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px solid rgb(0, 213, 201);
+    margin: 1rem;
+}
+
+#publications ul {
+  list-style: none; /* Remove default bullets */
+}
+
+#publications li {
+  margin-bottom: 10px;
+}
+
+#publications ul li::before {
+  content: "\2022"; 
+  color: rgb(0, 213, 201);
+  font-weight: bold; 
+  display: inline-block; 
+  width: 1em; 
+  margin-left: -1em; 
+}

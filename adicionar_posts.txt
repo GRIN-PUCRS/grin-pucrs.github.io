@@ -1,0 +1,15 @@
+Para adicionar posts:
+
+ - criar arquivo na pasta _posts no formato ano-mes-dia-titulo.markdown
+ - preencher o front matter (manter "layout: post" e adicionar a imagem do card na pasta img/posts):
+
+---
+layout: post
+title: Welcome to Jekyll!
+description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.
+data: 27/09/2021
+picture: /img/posts/lad.jpg
+author: Nome
+---
+
+ - abaixo do front matter fica o espaço para adicionar o texto do post
