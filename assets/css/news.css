@@ -3,6 +3,20 @@
   object-fit: cover;
 }
 
+.card-deck {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.card-deck .card {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.card:hover {
+  opacity: 0.6;
+}
+
 /* post */
 
 .pagina-post {
@@ -46,4 +60,29 @@
   height: 100%;
   background-size: cover;
   background-position: center center;
+}
+
+/* pagination */
+
+.pagination a, .pagination span {
+  padding: 7px 18px;
+  border: 1px solid #eee;
+  margin-left: -2px;
+  margin-right: -2px;
+  background-color: #ffffff;
+  display: inline-block;
+}
+
+.pagination a {
+  color: rgb(0, 213, 201);
+}
+
+.pagination a:hover { 
+  background-color: #f1f1f1;
+  color: #333;
+  text-decoration: none;
+}
+
+.pagination {
+  text-align: center;
 }
