@@ -6,4 +6,3 @@ picture: /img/members/wagnermarques.jpeg
 research_interests: 'Serverless'
 projects: 'Serverless'
 ---
-

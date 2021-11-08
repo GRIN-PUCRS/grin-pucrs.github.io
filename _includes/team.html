@@ -21,4 +21,24 @@
       {% endfor %}
     </div>
   </div>
+  <div class="container p-5">
+    <div class="col-lg-12">
+      <div class="team-member">
+        <h1>Membros antigos</h1>
+        <br/><br/>
+      </div>
+    </div>
+    <div class="row">
+      {% for member in site.membersold%}
+        {% if member.role != 'Coordenador do Grupo' %}
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="{{ member.picture }}">
+              <h4>{{ member.name }}</h4>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
 </section>

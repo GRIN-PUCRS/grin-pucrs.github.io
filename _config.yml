@@ -36,6 +36,7 @@ plugins:
 collections:
   posts:
   members:
+  membersold:
   projects:
     output: true
   papers:
